@@ -6,6 +6,27 @@
 :root {
     --theme-color: #84cc16;
     --theme-offset-color: #cbd5e1;
+    --theme-base-color: white;
+    --shadow-color: grey;
+    --text-color-1: black;
+    --text-color-2: white;
+    color: var(--text-color-1);
+}
+
+:root.dark {
+    --theme-color: #84cc16;
+    --theme-offset-color: #0f172a;
+    --theme-base-color: black;
+    --shadow-color: #84cc16;
+    --text-color-1: white;
+    --text-color-2: black;
+    color: var(--text-color-1);
+}
+
+:root.light {
+    --theme-color: #84cc16;
+    --theme-offset-color: #cbd5e1;
+    --theme-base-color: white;
     --shadow-color: grey;
     --text-color-1: black;
     --text-color-2: white;
@@ -18,6 +39,7 @@ img {
 
 svg {
     width: 24px;
+    fill: var(--text-color-1);
 }
 
 .pfp {
@@ -35,9 +57,11 @@ svg {
 
 .header {
     grid-column: 2/3;
+    grid-row: 1/2;
     display: grid;
     grid-template-columns: 550px auto;
     justify-content: space-between;
+    background-color: var(--theme-base-color);
 }
 
 .header .search_panel {
@@ -61,12 +85,16 @@ svg {
 .header .account_panel {
     margin-right: 50px;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     align-items: center;
 }
 
-.header .account_panel img {
+.header .account_panel > svg,img {
     margin-right: 20px;
+}
+
+.theme-icon:hover {
+    cursor: pointer;
 }
 
 /* SIDEBAR */
@@ -116,7 +144,8 @@ svg {
     justify-content: space-between;
     padding: 0 70px;
     align-content: center;
-    box-shadow: 0 5px 3px var(--shadow-color);;
+    box-shadow: 0 0 8px 5px var(--shadow-color);
+    background-color: var(--theme-base-color);
 }
 
 .profile_panel {
@@ -191,7 +220,7 @@ svg {
 }
 
 .content_item {
-    background-color: white;
+    background-color: var(--theme-base-color);
     border-radius: 20px;
     border-left: 10px orange solid;
     padding: 20px;
@@ -217,7 +246,7 @@ svg {
 /* Announcements */
 
 .announcements_grid, .trending_grid {
-    background-color: white;
+    background-color: var(--theme-base-color);
     padding: 20px;
     display: grid;
     grid-template-rows: repeat(4, auto);
