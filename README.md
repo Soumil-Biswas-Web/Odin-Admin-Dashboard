@@ -1,4 +1,4 @@
-# Odin-Admin_Dashboard
+# Odin-Admin-Dashboard
 Project Submission for the Intermediate HTML and CSS Course in the Odin Project
 
 Open the Website using the link https://soumil-biswas-web.github.io/Odin-Admin_Dashboard/
