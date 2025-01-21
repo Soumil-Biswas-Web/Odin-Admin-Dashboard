@@ -123,6 +123,7 @@ svg {
     justify-content: start;
     align-items: center;
     margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 .dashboard svg {
@@ -224,9 +225,6 @@ svg {
     border-radius: 20px;
     border-left: 10px orange solid;
     padding: 20px;
-}
-
-.content_item {
     display: grid;
     grid-template-rows: 1fr 24px;
 }
@@ -258,4 +256,12 @@ svg {
 .grid_item_3 {
     display: grid;
     grid-template-columns: 50px 1fr;
+}
+
+@media (max-width: 1000px) {
+    .content_grid {
+        display: grid;
+        grid-template: repeat(auto-fit, min(30%, 250px)) / repeat(auto-fit, 350px);
+        gap: 20px;
+    }
 }
